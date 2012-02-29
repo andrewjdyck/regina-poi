@@ -1,0 +1,5 @@
+Dec. 4:
+Blake: changed address lookup to use the city bounds, so you don't have to append "regina, sk" to the address or risk getting an address from timbuktu
+fixed a few ui bugs with the marker that displays when you search an address
+
+Andrew: moved data to it's own folder and wrapped up the python code into a function.
