@@ -1,4 +1,4 @@
-function getLocationList() {
+function getLocationList(lstTypes) {
 
 	var result = $.ajax('data/POI.json', {
 		async:false,
@@ -12,5 +12,17 @@ function getLocationList() {
 		}
 	);
 	var list = $.parseJSON( result.responseText );
-	return list;
+    var locations = [];
+    if (lstTypes != null) {
+        for (i=0;i<list.length;i++) {
+            for (j=0;j<lstTypes.length;j++) {
+                if (list[i].TYPE == lstTypes[j]) {
+                    locations.push(list[i]);
+                }
+            }
+        }
+        return locations;
+    } else {
+        return list;
+    }
 }
