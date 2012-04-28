@@ -1,4 +1,4 @@
-function generateMap(lstTypes) {
+function generateMap() {
 
 	var latlng = new google.maps.LatLng(50.455144, -104.606406);
     var lstTypes = ["ATHLETIC FIELD"];
