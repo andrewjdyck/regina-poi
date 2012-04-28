@@ -20,9 +20,15 @@
 		</style>
 
 		<script type="text/javascript">
-		var map;
+		var allVals = [];
 		$( function() {
-			map = generateMap();
+                  
+                       $('#checkboxes form').change( function() {
+                            $('input').each(function() {
+                               allVals.push($(this).val());     
+                            });
+
+                        });
 		});
 		</script>
 
@@ -47,10 +53,10 @@
         <div id="checkboxes" style="height:50px;">
             <h3>Installation</h3>
             <form>
-                <input type="checkbox" name="poi" value="arena" />Arena<br />
-                <input type="checkbox" name="poi" value="athletic_field" />Athletic field<br />
-                <input type="checkbox" name="poi" value="ball_diamond" />Ball diamond<br />
-                <input type="checkbox" name="poi" value="skating_rink" />Skating rink<br />
+                <input type="checkbox" name="poi" id="arena" value="arena" />Arena<br />
+                <input type="checkbox" name="poi" id="athletic" value="athletic_field" />Athletic field<br />
+                <input type="checkbox" name="poi" id= "ball" value="ball_diamond" />Ball diamond<br />
+                <input type="checkbox" name="poi" id= "skating" value="skating_rink" />Skating rink<br />
             </form>
         </div>
 <script type="text/javascript">
