@@ -26,10 +26,10 @@
     
                   map = generateMap();
                        $('#checkboxes form').change( function() {
-                            $('input').each(function() {
+                            $('#checkboxes form :checked').each(function() {
                                allVals.push($(this).val());     
                             });
-                        document.write (allVals)
+                        console.log (allVals)
 
                         });
 		});
