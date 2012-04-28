@@ -21,12 +21,15 @@
 
 		<script type="text/javascript">
 		var allVals = [];
+                var map;
 		$( function() {
-                  
+    
+                  map = generateMap();
                        $('#checkboxes form').change( function() {
                             $('input').each(function() {
                                allVals.push($(this).val());     
                             });
+                        document.write (allVals)
 
                         });
 		});
