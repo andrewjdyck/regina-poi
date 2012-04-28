@@ -26,3 +26,12 @@ function getLocationList(lstTypes) {
         return list;
     }
 }
+
+function setInfobox(data) {
+    var result = "<div id='" + data.NAME + "'>";
+    result += "Name: " + data.NAME + "<br />";
+    result += "Location: " + data.LOCATION + "<br />";
+    result += "Address: " + data.ADDRESS + "<br />";
+    result += "Type: " + data.TYPE + "</div>";
+    return result;
+}

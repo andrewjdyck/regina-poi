@@ -1,7 +1,7 @@
 function generateMap(lstTypes) {
 
 	var latlng = new google.maps.LatLng(50.455144, -104.606406);
-    var lstTypes = ["ATHLETIC FIELD"];
+
 	var locations = getLocationList(lstTypes);
 
 	var map = new google.maps.Map($('#map_canvas')[0], {
@@ -24,7 +24,7 @@ function generateMap(lstTypes) {
     	 google.maps.event.addListener(marker, 'click', (function(marker, i) {
     		 return function() {
         	 map.setZoom(18);
-        	 infowindow.setContent(locations[i].TYPE);
+        	 infowindow.setContent(setInfobox(locations[i]));
         	 infowindow.open(map, marker);
          }
        })(marker, i));
