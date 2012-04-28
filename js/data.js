@@ -35,3 +35,7 @@ function setInfobox(data) {
     result += "Type: " + data.TYPE + "</div>";
     return result;
 }
+
+
+
+
