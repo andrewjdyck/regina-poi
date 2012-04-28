@@ -2,7 +2,9 @@ function generateMap() {
 
 	var latlng = new google.maps.LatLng(50.455144, -104.606406);
 
-	var locations = getLocationList();
+	var fulldata = getLocationList();
+
+    var locations [];
 
 	var map = new google.maps.Map($('#map_canvas')[0], {
 		zoom: 12,
@@ -16,7 +18,7 @@ function generateMap() {
 
      for (i = 0; i < locations.length; i++) {
     	 marker = new google.maps.Marker({
-    		 position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
+    		 position: new google.maps.LatLng(locations[i].LATITUDE, locations[i].LONGITUDE),
     		 map: map,
     		 title:locations[i].address
     	 });
@@ -24,7 +26,7 @@ function generateMap() {
     	 google.maps.event.addListener(marker, 'click', (function(marker, i) {
     		 return function() {
         	 map.setZoom(18);
-        	 infowindow.setContent(locations[i].content);
+        	 infowindow.setContent(locations[i].TYPE);
         	 infowindow.open(map, marker);
          }
        })(marker, i));

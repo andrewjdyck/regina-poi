@@ -1,6 +1,6 @@
 function getLocationList() {
 
-	var result = $.ajax('data/locations.json', {
+	var result = $.ajax('data/POI.json', {
 		async:false,
 		success: function(data, textStatus, jqhr) {
 
