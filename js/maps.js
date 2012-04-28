@@ -1,8 +1,8 @@
 function generateMap() {
 
 	var latlng = new google.maps.LatLng(50.455144, -104.606406);
-
-	var locations = getLocationList(["ATHLETIC FIELD"]);
+    var lstTypes = ["ATHLETIC FIELD"];
+	var locations = getLocationList(lstTypes);
 
 	var map = new google.maps.Map($('#map_canvas')[0], {
 		zoom: 12,
